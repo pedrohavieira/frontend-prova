@@ -30,3 +30,7 @@ function atualizarLista() {
     });
     totalSpan.textContent = total.toFixed(2);
   }
+  function removerGasto(index) {
+    gastos.splice(index, 1);
+    atualizarLista();
+  }
