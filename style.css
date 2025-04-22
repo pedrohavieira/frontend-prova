@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 20px;
   }
+  
   .container {
     max-width: 500px;
     margin: auto;
@@ -12,9 +13,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
+  
   h1, h2, h3 {
     text-align: center;
   }
+  
   form {
     margin-bottom: 20px;
   }
@@ -44,6 +47,7 @@ body {
   button:hover {
     background-color: #1976d2;
   }
+  
   ul {
     list-style-type: none;
     padding: 0;
