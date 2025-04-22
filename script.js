@@ -18,3 +18,15 @@ if (descricao === '' || isNaN(valor) || categoria === '') {
 gastos.push({ descricao, valor, categoria });
 atualizarLista();
 form.reset();
+function atualizarLista() {
+    lista.innerHTML = '';
+    let total = 0;
+    gastos.forEach((gasto, index) => {
+      total += gasto.valor;
+      const li = document.createElement('li');
+      const valorClasse = gasto.valor > 100 ? 'valor-alto' : '';
+      li.innerHTML = ` <div> <strong>${gasto.descricao}</strong> - R$ <span class="${valorClasse}">${gasto.valor.toFixed(2)}</span> <em>(${gasto.categoria})</em> </div> <button onclick="removerGasto(${index})">Excluir</button> `;
+      lista.appendChild(li);
+    });
+    totalSpan.textContent = total.toFixed(2);
+  }
